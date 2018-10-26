@@ -1,6 +1,25 @@
 extends /blocks/layout-default/layout-default
+include /blocks/header/header
+include /blocks/header-menu/header-menu
+include /blocks/logo/logo
+include /blocks/hero/hero
+include /blocks/container/container
+
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'ZET - portfolio project';
 
 block content
+	+header
+		+e.navigation
+			+e.logo
+				+logo
+			+e.menu
+				+header-menu
+					| menu
+					+e.I.icon
+	+hero
+		+e.H2.title: | Something Nothing
+		+e.sub-title: | Enean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim iam ultricies nisi eleifend tellus.
+		+e.BUTTON.button: | LET’S TALK
+		+e.I.arrow
